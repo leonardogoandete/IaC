@@ -18,12 +18,12 @@ resource "aws_instance" "app_server" {
   ami           = "ami-0ecc74eca1d66d8a6"
   instance_type = "t2.micro"
   key_name      = "iac-alura"
-  user_data     = <<-EOF
-                #!/bin/bash
-                cd ~
-                echo "<h1>Realizado com Terraform</h1>" > index.html
-                nohup busybox httpd -f -p 8080 &
-                EOF
+#  user_data     = <<-EOF
+#                #!/bin/bash
+#                cd ~
+#                echo "<h1>Realizado com Terraform</h1>" > index.html
+#                nohup busybox httpd -f -p 8080 &
+#                EOF
   tags = {
     Name = var.instance_name
   }
