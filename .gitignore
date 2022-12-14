@@ -10,5 +10,7 @@
 *.tfstate.*
 
 *.pem
-IaC-DEV
-IaC-Prod
+env/Dev/IaC-Dev
+env/Prod/IaC-Prod
+env/Dev/IaC-Dev.pub
+env/Prod/IaC-Prod.pub
