@@ -17,3 +17,4 @@ env/Dev/IaC-DEV.pub
 env/Dev/IaC-DEV
 infra/.terraform.lock.hcl
 env/Dev/.terraform.lock.hcl
+env/Prod/.terraform.lock.hcl
