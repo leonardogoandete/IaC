@@ -11,20 +11,19 @@ terraform {
 
 provider "aws" {
   profile = "default"
-  region  = "us-west-2"
+  region  = var.regiao_aws
 }
 
 resource "aws_instance" "app_server" {
   ami           = "ami-0ecc74eca1d66d8a6"
-  instance_type = "t1.micro"
-  key_name      = "iac-alura"
-#  user_data     = <<-EOF
-#                #!/bin/bash
-#                cd ~
-#                echo "<h1>Realizado com Terraform</h1>" > index.html
-#                nohup busybox httpd -f -p 8080 &
-#                EOF
+  instance_type = var.instancia
+  key_name      = var.chave
   tags = {
     Name = var.instance_name
   }
+}
+
+resource "aws_key_pair" "chaveSSH" {
+  key_name    = var.chave
+  public_key  = file("${var.chave}.pub")
 }

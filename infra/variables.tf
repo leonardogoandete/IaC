@@ -3,3 +3,15 @@ variable "instance_name" {
   type        = string
   default     = "Terraform Ansible Python"
 }
+
+variable "regiao_aws" {
+  type  = string
+}
+
+variable "chave" {
+  type = string
+}
+
+variable "instancia" {
+  type = string
+}
