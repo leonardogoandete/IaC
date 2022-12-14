@@ -10,3 +10,5 @@
 *.tfstate.*
 
 *.pem
+IaC-DEV
+IaC-Prod
