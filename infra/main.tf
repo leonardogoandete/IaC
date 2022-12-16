@@ -15,7 +15,7 @@ provider "aws" {
 }
 
 resource "aws_launch_template" "maquina" {
-  image_id = "ami-0ecc74eca1d66d8a6"
+  image_id      = "ami-0ecc74eca1d66d8a6"
   instance_type = var.instancia
   key_name      = var.chave
   tags = {
