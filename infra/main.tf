@@ -28,3 +28,13 @@ resource "aws_key_pair" "chaveSSH" {
   key_name    = var.chave
   public_key  = file("${var.chave}.pub")
 }
+
+resource "aws_autoscaling_group" "grupo" {
+  name =   var.nomeGrupo
+  max_size = var.maximo
+  min_size = var.minimo
+  launch_template {
+    id = aws_launch_template.maquina.id
+    version = "$Latest"
+  }
+}
