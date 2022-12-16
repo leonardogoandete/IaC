@@ -9,7 +9,3 @@ module "aws-dev" {
   nomeGrupo = "DEV"
   producao = false
 }
-
-output "IP" {
-  value = module.aws-dev.IP_publico
-}
