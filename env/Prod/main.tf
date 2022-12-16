@@ -8,8 +8,3 @@ module "aws-prod" {
   maximo = 10
   nomeGrupo = "Prod"
 }
-
-output "IP" {
-  description = "Endereco de IP Publico de PROD da instancia EC2"
-  value       = module.aws-prod.IP_publico
-}

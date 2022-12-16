@@ -8,8 +8,3 @@ module "aws-dev" {
   maximo = 1
   nomeGrupo = "DEV"
 }
-
-output "IP" {
-  description = "Endereco de IP Publico de DEV da instancia EC2"
-  value       = module.aws-dev.IP_publico
-}
