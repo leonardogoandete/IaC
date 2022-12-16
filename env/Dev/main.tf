@@ -3,6 +3,7 @@ module "aws-dev" {
   instancia = "t1.micro"
   regiao_aws = "us-west-2"
   chave = "IaC-DEV"
+  grupoDeSeguranca = "DEV"
 }
 
 output "IP" {

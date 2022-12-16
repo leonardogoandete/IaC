@@ -15,3 +15,7 @@ variable "chave" {
 variable "instancia" {
   type = string
 }
+
+variable "grupoDeSeguranca" {
+  type = string  
+}
