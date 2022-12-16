@@ -1,8 +1,9 @@
+#!/bin/bash
 cd ~
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 sudo python3 get-pip.py
 sudo python3 -m pip install ansible
-tee -a playbook.yaml > /dev/null <<EOT
+tee -a playbook.yml > /dev/null <<EOT
 - hosts: localhost
   tasks:
     - name: Instalando o python3 e VirtualEnv
@@ -36,4 +37,4 @@ tee -a playbook.yaml > /dev/null <<EOT
       shell: '. ~/tcc/venv/bin/activate; nohup python ~/tcc/manage.py runserver 0.0.0.0:8000 &'
 python get-pip.py
 EOT
-ansible-playbook playbook.yaml
+ansible-playbook playbook.yml
