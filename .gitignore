@@ -21,3 +21,4 @@ env/Prod/.terraform.lock.hcl
 IaC-DEV
 
 IaC-Prod
+__pycache__/carga.cpython-310.pyc
